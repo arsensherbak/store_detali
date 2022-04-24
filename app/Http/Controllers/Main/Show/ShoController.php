@@ -13,6 +13,6 @@ class ShoController extends Controller
     public function __invoke(Product $product)
     {
 
-        return view('main.prod', compact('product'));
+        return view('main.prodd', compact('product'));
     }
 }
