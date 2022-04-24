@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers\Admin\Product;
+
+use App\Http\Controllers\Controller;
+use App\Models\Car;
+use App\Models\Product;
+
+
+class IndexController extends Controller
+{
+    public function __invoke()
+    {
+        $products = Product::all();
+        return view('admin.products.index', compact('products'));
+    }
+}
