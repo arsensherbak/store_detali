@@ -39,10 +39,10 @@
                     </a>
                     @auth()
                         <span>{{$product->likes_count}}</span>
-                    <form action="{{route('main.Likes', $product->id)}}" method="post" class="w-25 ">
-                        @csrf
+                        <form action="{{route('main.Likes', $product->id)}}" method="post" class="w-25 ">
+                            @csrf
 
-                        <button type="submit" class="border-0 bg-transparent">
+                            <button type="submit" class="border-0 bg-transparent">
 
                                 @if(auth()->user()->likedProducts->contains($product->id))
                                     <i class="fas fa-heart"></i>
@@ -50,8 +50,8 @@
                                     <i class="far fa-heart"></i>
                                 @endif
 
-                        </button>
-                    </form>
+                            </button>
+                        </form>
                     @endauth
                     @guest()
                         <div>
