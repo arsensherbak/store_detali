@@ -12,7 +12,7 @@ class IndexController extends Controller
     public function __invoke()
     {
         $marks = Mark::all();
-        $products = Product::all();
+        $products = Product::paginate(2);
         return view('main.home', compact('marks', 'products'));
     }
 }

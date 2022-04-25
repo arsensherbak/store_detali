@@ -60,9 +60,13 @@
                         </div>
                     @endguest
                 </div>
+
             </div>
         @endforeach
-    </div>
 
+    </div>
+    <div>
+        {{$products->links()}}
+    </div>
 @endsection
 
